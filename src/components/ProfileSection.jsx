@@ -131,7 +131,7 @@ const ProfileSection = () => {
                     
                     {/* Centered container with max-width for smaller cards */}
                     <div className="w-full">
-                        <div className="w-4/6 justify-center grid gap-6 grid-cols-1 md:grid-cols-2">
+                        <div className="w-full md:w-4/6 justify-center grid gap-6 grid-cols-1 md:grid-cols-2">
                             {projects.map((project, index) => (
                                 <div key={index} className="flex justify-center "> 
                                  <a
@@ -219,7 +219,7 @@ const ProfileSection = () => {
                         Let's collaborate to bring your digital vision to life with creativity, precision, and innovation.
                     </p>
                     <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                        Start Your Project
+                       <a href="/contact" className="text-white">Start Your Project</a>
                     </button>
                 </div>
             </div>
