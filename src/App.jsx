@@ -7,7 +7,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ProfileDetail from "./pages/ProfileDetail";
 import CaseStudies from "./pages/CaseStudies";
-
+import Services from "./pages/services";
+import Portfolio from "./components/portfoliosection";
 function App() {
   return (
     <BrowserRouter>
@@ -20,7 +21,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile/:id" element={<ProfileDetail />} />
         <Route path="/case-studies" element={<CaseStudies />} />
-
+        <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+         
       </Routes>
     </BrowserRouter>
   );

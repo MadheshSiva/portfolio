@@ -10,17 +10,17 @@ const Contact = () => {
       icon: Mail,
       title: 'Email',
       description: 'Reach us anytime',
-      value: 'support@example.com',
-      href: 'mailto:support@example.com',
+      value: 'madheshsurya28@gmail.com',
+      href: 'mailto:madheshsurya28@gmail.com',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       id: 'phone',
       icon: Phone,
       title: 'Phone',
-      description: 'Mon–Fri · 10am–6pm',
-      value: '+91 99999 99999',
-      href: 'tel:+919999999999',
+      description: 'Mon–Fri · 9am–6pm',
+      value: '+91 97906 09284',
+      href: 'tel:+919790609284',
       color: 'from-purple-500 to-pink-500'
     },
     {
@@ -35,7 +35,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="pt-32 pb-24  bg-gradient-to-b from-gray-500 via-blue-50/30 to-white dark:from-neutral-950 dark:via-neutral-900 dark:to-black min-h-screen">
+    <section className="pt-32 pb-24 bg-[#f5f5f7] dark:bg-black min-h-screen">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header Section */}
@@ -46,11 +46,11 @@ const Contact = () => {
             </span>
           </div>
           
-          <h1 className="text-5xl  md:text-6xl lg:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+          <h1 className="text-5xl  md:text-6xl lg:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-600 dark:from-white dark:to-gray-400">
             Let's Work Together
           </h1>
 
-          <p className="mt-6 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p className="mt-6 text-lg text-gray-500 dark:text-gray-400 leading-relaxed">
             Have a project in mind or need help with software, mobile, or AI solutions?
             We'd love to hear from you and discuss how we can bring your ideas to life.
           </p>
@@ -136,7 +136,7 @@ const Contact = () => {
               </p>
 
               <a
-                href="mailto:support@example.com"
+                href="mailto:madheshsurya28@gmail.com"
                 className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-blue-600 font-semibold text-base hover:scale-105 hover:shadow-xl transition-all duration-300 group"
               >
                 <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

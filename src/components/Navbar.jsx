@@ -17,10 +17,9 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-        ${
-          scrolled
-            ? "backdrop-blur-md bg-white/90 dark:bg-slate-900/90 shadow-lg border-b border-gray-200/50 dark:border-gray-700/50"
-            : "bg-transparent"
+        ${scrolled
+          ? "backdrop-blur-md bg-white/90 dark:bg-slate-900/90 shadow-lg border-b border-gray-200/50 dark:border-gray-700/50"
+          : "bg-transparent"
         }
       `}
     >
@@ -34,9 +33,8 @@ const Navbar = () => {
               </div>
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg blur opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
             </div>
-            <span className={`text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text transition-all duration-300 ${
-              scrolled ? "text-transparent" : "text-white"
-            }`}>
+            <span className={`text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text transition-all duration-300 ${scrolled ? "text-transparent" : "from-blue-500 to-purple-700 text-transparent"
+              }`}>
               Pick Pixel
             </span>
           </Link>
@@ -45,47 +43,43 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-8">
             <Link
               to="/about"
-              className={`text-sm font-medium transition-colors duration-200 relative group ${
-                scrolled
-                  ? "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                  : "text-white hover:text-blue-300"
+              className={`text-sm font-medium transition-colors duration-200 relative group ${scrolled
+                ? "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                : "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:from-blue-400 hover:to-purple-600"
               }`}
             >
               About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
               to="/services"
-              className={`text-sm font-medium transition-colors duration-200 relative group ${
-                scrolled
-                  ? "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                  : "text-white hover:text-blue-300"
+              className={`text-sm font-medium transition-colors duration-200 relative group ${scrolled
+                ? "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                : "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:from-blue-400 hover:to-purple-600"
               }`}
             >
               Services
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
               to="/team"
-              className={`text-sm font-medium transition-colors duration-200 relative group ${
-                scrolled
-                  ? "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                  : "text-white hover:text-blue-300"
+              className={`text-sm font-medium transition-colors duration-200 relative group ${scrolled
+                ? "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                : "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:from-blue-400 hover:to-purple-600"
               }`}
             >
               Team
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
               to="/portfolio"
-              className={`text-sm font-medium transition-colors duration-200 relative group ${
-                scrolled
-                  ? "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                  : "text-white hover:text-blue-300"
+              className={`text-sm font-medium transition-colors duration-200 relative group ${scrolled
+                ? "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                : "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:from-blue-400 hover:to-purple-600"
               }`}
             >
               Portfolio
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link
               to="/contact"
@@ -98,9 +92,8 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`md:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-200 ${
-              scrolled ? "text-gray-700 dark:text-gray-300" : "text-white"
-            }`}
+            className={`md:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-200 ${scrolled ? "text-gray-700 dark:text-gray-300" : "text-white"
+              }`}
             aria-label="Toggle menu"
           >
             <svg
