@@ -34,7 +34,7 @@ const Home = () => {
       <ProfileSection />
 
       {/* CAPABILITIES */}
-      <section className="py-32 bg-white dark:bg-black">
+      {/* <section className="py-32 bg-white dark:bg-black">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
           {[
             [
@@ -58,11 +58,19 @@ const Home = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
 
       {/* TECH STACK */}
       <section className="py-24 bg-gray-50 dark:bg-neutral-900 overflow-hidden">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full text-sm font-medium">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 18L22 12L16 6M8 6L2 12L8 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            TECH STACK
+          </div>
+        </div>
         <div className="relative">
           <div className="flex w-max animate-marquee gap-16 text-sm tracking-tight text-gray-500 dark:text-gray-400">
             <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-gray-50 dark:from-neutral-900" />
