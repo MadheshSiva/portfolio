@@ -172,9 +172,9 @@ const ProfileSection = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-violet-500/[0.06] to-blue-500/[0.04] pointer-events-none" />
             <div className="relative grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
-                { value: "2+", label: "Projects Delivered" },
+                { value: "4+", label: "Projects Delivered" },
                 { value: "4", label: "Team Members" },
-                { value: "98%", label: "Client Satisfaction" },
+                { value: "99%", label: "Client Satisfaction" },
                 { value: "24/7", label: "Support Available" },
               ].map((stat, i) => (
                 <div key={i}>

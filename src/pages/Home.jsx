@@ -273,10 +273,10 @@ const Home = () => {
       <section className="relative z-10 py-24 px-6 border-y border-white/[0.04]">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {[
-            { value: "50+", label: "Products Shipped" },
+            { value: "4+", label: "Products Shipped" },
             { value: "99%", label: "Client Retention" },
-            { value: "10M+", label: "Users Reached" },
-            { value: "5 Yrs", label: "In The Game" },
+            { value: "15K+", label: "Users Reached" },
+            { value: "2+ Yrs", label: "In The Game" },
           ].map((stat, i) => (
             <RevealSection key={i} delay={i * 100} className="text-center">
               <span className="block text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-white/90 mb-2">
