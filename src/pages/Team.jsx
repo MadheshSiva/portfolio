@@ -12,52 +12,54 @@ const Team = () => {
   }, []);
 
   return (
-    <section className="pt-32 pb-24 bg-[#f5f5f7] dark:bg-black min-h-screen">
+    <section className="pt-32 pb-24 bg-[#050505] min-h-screen text-white">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Header Section */}
+        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-gray-700 dark:text-white">
-            Meet Our Team
+          <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-4 block">
+            The People
+          </span>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white/90">
+            Meet our <span className="animated-gradient-text">team</span>
           </h1>
-          <p className="mt-8 text-lg text-gray-500 dark:text-gray-300 leading-relaxed">
+          <p className="mt-8 text-lg text-white/45 leading-relaxed font-light">
             Talented professionals dedicated to bringing your ideas to life with expertise, creativity, and passion.
           </p>
         </div>
 
         {/* Team Grid */}
         {loading ? (
-          <TeamGridSkeleton count={6} />
+          <TeamGridSkeleton count={4} />
         ) : (
-          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {teamMembers.map((member, index) => (
-              <div
-                key={member.id}
-                style={{ animationDelay: `${index * 100}ms` }}
-                className="animate-fadeIn"
-              >
-                <TeamCard member={member} />
-              </div>
+              <TeamCard key={member.id} member={member} index={index} />
             ))}
           </div>
         )}
 
-        {/* Join Team CTA */}
+        {/* Join CTA */}
         <div className="mt-32 text-center">
-          <div className="bg-gradient-to-br from-indigo-600 to-purple-700 rounded-3xl p-12 shadow-2xl">
-            <h2 className="text-3xl font-semibold text-white mb-4">
-              Want to join our team?
-            </h2>
-            <p className="text-indigo-100 text-lg mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals who are passionate about technology and innovation.
-            </p>
-            <a
-              href="/contact"
-              className="inline-block px-8 py-4 rounded-full bg-white text-indigo-600 font-medium
-                       hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
-              Get in Touch
-            </a>
+          <div className="glass p-14 sm:p-20 relative overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-violet-500/[0.04] blur-[100px] rounded-full" />
+            </div>
+            <div className="relative">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-white/90 mb-5">
+                Want to join our team?
+              </h2>
+              <p className="text-white/40 text-lg mb-10 max-w-2xl mx-auto font-light">
+                We're always looking for talented individuals who are passionate about technology and innovation.
+              </p>
+              <a
+                href="/contact"
+                className="group inline-flex items-center gap-2 px-10 py-5 bg-white text-black rounded-full font-semibold text-sm hover:shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:scale-[1.03] transition-all duration-500"
+              >
+                Get in Touch
+                <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+              </a>
+            </div>
           </div>
         </div>
 

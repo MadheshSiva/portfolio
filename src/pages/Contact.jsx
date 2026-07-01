@@ -12,7 +12,6 @@ const Contact = () => {
       description: 'Reach us anytime',
       value: 'madheshsurya28@gmail.com',
       href: 'mailto:madheshsurya28@gmail.com',
-      color: 'from-blue-500 to-cyan-500'
     },
     {
       id: 'phone',
@@ -21,7 +20,6 @@ const Contact = () => {
       description: 'Mon–Fri · 9am–6pm',
       value: '+91 97906 09284',
       href: 'tel:+919790609284',
-      color: 'from-purple-500 to-pink-500'
     },
     {
       id: 'location',
@@ -30,34 +28,32 @@ const Contact = () => {
       description: 'Based in India · Working Worldwide',
       value: 'Remote Friendly 🌍',
       href: null,
-      color: 'from-emerald-500 to-teal-500'
     }
   ];
 
   return (
-    <section className="pt-32 pb-24 bg-[#f5f5f7] dark:bg-black min-h-screen">
+    <section className="pt-32 pb-24 bg-[#050505] min-h-screen text-white">
       <div className="max-w-6xl mx-auto px-6">
 
-        {/* Header Section */}
+        {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-block mb-4">
-            <span className="px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-sm font-medium">
-              Get In Touch
-            </span>
-          </div>
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-xl text-xs tracking-[0.25em] uppercase text-white/50 mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
+            Get In Touch
+          </span>
           
-          <h1 className="text-5xl  md:text-6xl lg:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-600 dark:from-white dark:to-gray-400">
-            Let's Work Together
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white/90">
+            Let's work <span className="animated-gradient-text">together</span>
           </h1>
 
-          <p className="mt-6 text-lg text-gray-500 dark:text-gray-400 leading-relaxed">
+          <p className="mt-8 text-lg text-white/45 leading-relaxed font-light">
             Have a project in mind or need help with software, mobile, or AI solutions?
-            We'd love to hear from you and discuss how we can bring your ideas to life.
+            We'd love to hear from you.
           </p>
         </div>
 
         {/* Contact Cards */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
           {contactMethods.map((method) => {
             const Icon = method.icon;
             const isHovered = hoveredCard === method.id;
@@ -67,79 +63,60 @@ const Contact = () => {
                 key={method.id}
                 onMouseEnter={() => setHoveredCard(method.id)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className={`relative bg-white dark:bg-neutral-900 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-neutral-800 transition-all duration-300 ${
-                  isHovered ? 'scale-105 shadow-2xl' : ''
-                }`}
+                className="glass p-8 group cursor-default"
               >
-                {/* Gradient Background on Hover */}
-                <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${method.color} opacity-0 transition-opacity duration-300 ${
-                  isHovered ? 'opacity-5' : ''
-                }`} />
-
                 {/* Icon */}
-                <div className={`relative w-14 h-14 rounded-2xl bg-gradient-to-br ${method.color} flex items-center justify-center mb-6 transition-transform duration-300 ${
-                  isHovered ? 'rotate-6 scale-110' : ''
+                <div className={`w-14 h-14 rounded-2xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center mb-6 text-white/50 transition-all duration-500 ${
+                  isHovered ? 'text-violet-400 border-violet-500/30 bg-violet-500/[0.08]' : ''
                 }`}>
-                  <Icon className="w-7 h-7 text-white" />
+                  <Icon className="w-7 h-7" />
                 </div>
 
                 {/* Content */}
-                <div className="relative">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    {method.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                    {method.description}
-                  </p>
-                  
-                  {method.href ? (
-                    <a
-                      href={method.href}
-                      className={`inline-flex items-center gap-2 text-base font-medium bg-clip-text text-transparent bg-gradient-to-r ${method.color} hover:gap-3 transition-all duration-300`}
-                    >
-                      {method.value}
-                      <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${
-                        isHovered ? 'translate-x-1' : ''
-                      }`} style={{ color: 'currentColor', opacity: 0.7 }} />
-                    </a>
-                  ) : (
-                    <span className="inline-block text-base font-medium text-gray-700 dark:text-gray-300">
-                      {method.value}
-                    </span>
-                  )}
-                </div>
-
-                {/* Decorative Element */}
-                <div className={`absolute top-4 right-4 w-20 h-20 rounded-full bg-gradient-to-br ${method.color} opacity-10 blur-2xl transition-opacity duration-300 ${
-                  isHovered ? 'opacity-20' : ''
-                }`} />
+                <h3 className="text-xl font-semibold text-white/90 mb-2 tracking-tight">
+                  {method.title}
+                </h3>
+                <p className="text-sm text-white/35 mb-5 font-light">
+                  {method.description}
+                </p>
+                
+                {method.href ? (
+                  <a
+                    href={method.href}
+                    className="inline-flex items-center gap-2 text-base font-medium text-white/60 hover:text-violet-400 transition-all duration-300 group/link"
+                  >
+                    {method.value}
+                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
+                  </a>
+                ) : (
+                  <span className="inline-block text-base font-medium text-white/60">
+                    {method.value}
+                  </span>
+                )}
               </div>
             );
           })}
         </div>
 
-        {/* CTA Section */}
+        {/* CTA */}
         <div className="mt-32 text-center">
-          <div className="max-w-2xl mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-12 shadow-2xl relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full blur-3xl" />
-              <div className="absolute bottom-0 right-0 w-60 h-60 bg-white rounded-full blur-3xl" />
+          <div className="glass p-14 sm:p-20 relative overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-violet-500/[0.04] blur-[100px] rounded-full" />
             </div>
-
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <div className="relative">
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-white/90 mb-4">
                 Ready to start your project?
               </h2>
-              <p className="text-blue-100 mb-8 text-lg">
-                Let's discuss how we can help you achieve your goals
+              <p className="text-white/40 mb-10 text-lg font-light max-w-lg mx-auto">
+                Let's discuss how we can help you achieve your goals.
               </p>
 
               <a
                 href="mailto:madheshsurya28@gmail.com"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-blue-600 font-semibold text-base hover:scale-105 hover:shadow-xl transition-all duration-300 group"
+                className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-black rounded-full font-semibold text-sm hover:shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:scale-[1.03] transition-all duration-500"
               >
-                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                <Send className="w-5 h-5 group-hover:translate-x-0.5 transition-transform duration-300" />
                 Send us an Email
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
@@ -147,10 +124,10 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Additional Info */}
+        {/* Response time */}
         <div className="mt-16 text-center">
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            Average response time: <span className="font-semibold text-gray-700 dark:text-gray-300">24 hours</span>
+          <p className="text-sm text-white/25">
+            Average response time: <span className="font-semibold text-white/50">24 hours</span>
           </p>
         </div>
 
