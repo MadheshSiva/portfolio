@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import prakashPortfolio from '../assets/prakash-portfolio.png';
 import fitPartner from '../assets/fit-partner.png';
+import paavaiImage from '../assets/paavai.jpg';
+import momentImage from '../assets/moment.jpg';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -8,6 +10,28 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
+      title: "Paavai Website",
+      category: "Web Development",
+      description: "A modern, responsive website built with Next.js and TypeScript.",
+      image: paavaiImage,
+      technologies: ["Next.js", "TypeScript", "HTML", "CSS"],
+      liveLink: "https://paavaiwebsite.vercel.app/",
+      github: "",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Moment Galleri",
+      category: "Web Development",
+      description: "A beautiful gallery application built with Next.js and TypeScript.",
+      image: momentImage,
+      technologies: ["Next.js", "TypeScript", "HTML", "CSS"],
+      liveLink: "https://moment-galleri.vercel.app/",
+      github: "",
+      featured: true
+    },
+    {
+      id: 3,
       title: "Personal Portfolio Website",
       category: "Web Development",
       description: "A modern, responsive portfolio website showcasing work and skills with smooth animations and elegant design.",
@@ -18,7 +42,7 @@ const Portfolio = () => {
       featured: true
     },
     {
-      id: 2,
+      id: 4,
       title: "Fit Partner - Gym Website",
       category: "Web Development",
       description: "A comprehensive gym and fitness website featuring membership plans, class schedules, trainer profiles, and online booking.",

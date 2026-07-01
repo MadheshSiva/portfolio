@@ -3,26 +3,26 @@ export const teamMembers = [
   {
     id: 1,
     name: "Dinesh Kumar",
-    role: "Lead Frontend Engineer",
+    role: "Mobile App Developer",
     experience: "3+ Years",
     summary:
-      "Leads frontend development with a focus on scalable architecture, performance, and refined user experiences.",
-    skills: ["React", "Tailwind CSS", "UI Architecture"],
+      "Specializes in cross-platform mobile development with a focus on seamless, high-performance applications for iOS and Android.",
+    skills: ["React Native", "iOS", "Android", "Mobile Architecture"],
     timeline: [
-      { year: "2024 – Present", title: "Lead Frontend Engineer" },
-      { year: "2022 – 2024", title: "Frontend Engineer" }
+      { year: "2024 – Present", title: "Lead Mobile App Developer" },
+      { year: "2022 – 2024", title: "Mobile App Developer" }
     ],
     projects: [
-      "Travel Booking Platform",
-      "Enterprise Admin Dashboard",
-      "Mobile App User Interface"
+      "Cross-Platform Fitness App",
+      "E-commerce Mobile App",
+      "Delivery Tracking App"
     ],
     socials: {
       linkedin: "https://linkedin.com/in/dinesh",
       github: "https://github.com/dinesh",
       instagram: "https://instagram.com/dinesh"
     },
-    image: "/team/dev1.jpg",
+    image: "/team/dinesh.jpg",
     category: "engineering"
   },
 
@@ -107,7 +107,7 @@ export const teamMembers = [
   // ✅ UPDATED
   {
     id: 4,
-    name: "Santhosh",
+    name: "Sathiya",
     role: "UI / UX Designer",
     experience: "2+ Years",
     summary:

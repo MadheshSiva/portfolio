@@ -3,6 +3,8 @@ import TeamCard from "./TeamCard";
 import { teamMembers } from "../data/teamData";
 import fitPartnerImage from "../assets/fit-partner.png";
 import prakashPortfolioImage from "../assets/prakash-portfolio.png";
+import paavaiImage from "../assets/paavai.jpg";
+import momentImage from "../assets/moment.jpg";
 
 /* ─── Scroll-reveal hook ─── */
 function useReveal() {
@@ -75,6 +77,24 @@ const departments = [
 ];
 
 const projects = [
+  {
+    title: "Paavai Website",
+    description:
+      "A modern, responsive website built with Next.js and TypeScript.",
+    url: "https://paavaiwebsite.vercel.app/",
+    tech: ["Next.js", "TypeScript", "HTML", "CSS"],
+    category: "Web Development",
+    image: paavaiImage,
+  },
+  {
+    title: "Moment Galleri",
+    description:
+      "A beautiful gallery application built with Next.js and TypeScript.",
+    url: "https://moment-galleri.vercel.app/",
+    tech: ["Next.js", "TypeScript", "HTML", "CSS"],
+    category: "Web Development",
+    image: momentImage,
+  },
   {
     title: "Prakash Portfolio",
     description:
@@ -207,6 +227,9 @@ const ProfileSection = () => {
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      onError={(e) => {
+                        e.target.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23111" width="400" height="300"/><text x="50%" y="50%" font-family="Arial" font-size="18" fill="%23333" text-anchor="middle" dy=".3em">Project Image</text></svg>';
+                      }}
                     />
                     {/* Overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
