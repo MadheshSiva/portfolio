@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import { ThemeProvider } from "./context/ThemeContext";
 
 import Home from "./pages/Home";
 import Team from "./pages/Team";
@@ -9,10 +10,12 @@ import ProfileDetail from "./pages/ProfileDetail";
 import CaseStudies from "./pages/CaseStudies";
 import Services from "./pages/services";
 import Portfolio from "./components/portfoliosection";
+
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
+    <ThemeProvider>
+      <BrowserRouter>
+        <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -25,7 +28,8 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
          
       </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

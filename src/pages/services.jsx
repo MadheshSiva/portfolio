@@ -50,18 +50,18 @@ const Services = () => {
   ];
 
   return (
-    <section className="pt-32 pb-24 bg-[#050505] min-h-screen text-white">
+    <section className="pt-32 pb-24 bg-gray-50 dark:bg-[#050505] min-h-screen text-gray-900 dark:text-white">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-4 block">
+          <span className="text-xs tracking-[0.3em] uppercase text-gray-600 dark:text-white/30 font-medium mb-4 block">
             What We Offer
           </span>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white/90">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-gray-600 dark:text-white/90">
             Our <span className="animated-gradient-text">services</span>
           </h1>
-          <p className="mt-8 text-lg text-white/45 leading-relaxed font-light">
+          <p className="mt-8 text-lg text-gray-600 dark:text-white/45 leading-relaxed font-light">
             End-to-end digital solutions tailored to your business needs. 
             From concept to deployment, we bring your ideas to life.
           </p>
@@ -72,15 +72,15 @@ const Services = () => {
           {services.map((service, index) => (
             <div key={index} className="glass p-10 group cursor-default">
               {/* Icon */}
-              <div className="w-14 h-14 rounded-2xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center mb-8 text-white/50 group-hover:text-violet-400 group-hover:border-violet-500/30 group-hover:bg-violet-500/[0.08] transition-all duration-500">
+              <div className="w-14 h-14 rounded-2xl bg-black/5 dark:bg-white/[0.04] border border-black/10 dark:border-white/[0.08] flex items-center justify-center mb-8 text-gray-600 dark:text-white/50 group-hover:text-violet-400 group-hover:border-violet-500/30 group-hover:bg-violet-500/[0.08] transition-all duration-500">
                 {service.icon}
               </div>
 
               {/* Title & Description */}
-              <h3 className="text-2xl font-semibold text-white/90 mb-4 tracking-tight group-hover:text-white transition-colors duration-300">
+              <h3 className="text-2xl font-semibold text-gray-600 dark:text-white/90 mb-4 tracking-tight group-hover:text-gray-900 dark:text-white transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="text-white/40 leading-relaxed mb-8 font-light group-hover:text-white/55 transition-colors duration-300">
+              <p className="text-gray-600 dark:text-white/40 leading-relaxed mb-8 font-light group-hover:text-gray-600 dark:text-white/55 transition-colors duration-300">
                 {service.description}
               </p>
 
@@ -89,7 +89,7 @@ const Services = () => {
                 {service.features.map((feature, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1.5 text-[11px] font-medium tracking-wide uppercase rounded-full border border-white/[0.06] bg-white/[0.03] text-white/35 group-hover:border-violet-500/20 group-hover:text-white/50 transition-all duration-300"
+                    className="px-3 py-1.5 text-[11px] font-medium tracking-wide uppercase rounded-full border border-black/10 dark:border-white/[0.06] bg-black/5 dark:bg-white/[0.03] text-gray-600 dark:text-white/35 group-hover:border-violet-500/20 group-hover:text-gray-600 dark:text-white/50 transition-all duration-300"
                   >
                     {feature}
                   </span>
@@ -105,10 +105,10 @@ const Services = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-violet-500/[0.03] to-blue-500/[0.02] pointer-events-none" />
             <div className="relative">
               <div className="text-center mb-16">
-                <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-4 block">
+                <span className="text-xs tracking-[0.3em] uppercase text-gray-600 dark:text-white/30 font-medium mb-4 block">
                   How We Work
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-white/90">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-gray-600 dark:text-white/90">
                   Our Process
                 </h2>
               </div>
@@ -116,13 +116,13 @@ const Services = () => {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 {processSteps.map((step, i) => (
                   <div key={i} className="text-center group">
-                    <div className="w-16 h-16 rounded-2xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center mx-auto mb-5 group-hover:border-violet-500/30 group-hover:bg-violet-500/[0.08] transition-all duration-500">
+                    <div className="w-16 h-16 rounded-2xl bg-black/5 dark:bg-white/[0.04] border border-black/10 dark:border-white/[0.08] flex items-center justify-center mx-auto mb-5 group-hover:border-violet-500/30 group-hover:bg-violet-500/[0.08] transition-all duration-500">
                       <span className="text-lg font-mono font-bold text-violet-400">{step.num}</span>
                     </div>
-                    <h4 className="text-lg font-semibold text-white/90 mb-2 tracking-tight">
+                    <h4 className="text-lg font-semibold text-gray-600 dark:text-white/90 mb-2 tracking-tight">
                       {step.title}
                     </h4>
-                    <p className="text-sm text-white/40 font-light leading-relaxed">
+                    <p className="text-sm text-gray-600 dark:text-white/40 font-light leading-relaxed">
                       {step.desc}
                     </p>
                   </div>
@@ -139,23 +139,23 @@ const Services = () => {
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-violet-500/[0.04] blur-[100px] rounded-full" />
             </div>
             <div className="relative">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-white/90 mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-gray-600 dark:text-white/90 mb-5">
                 Ready to start your project?
               </h2>
-              <p className="text-white/40 text-lg mb-10 max-w-2xl mx-auto font-light">
+              <p className="text-gray-600 dark:text-white/40 text-lg mb-10 max-w-2xl mx-auto font-light">
                 Let's discuss how we can help bring your ideas to life.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a
                   href="/contact"
-                  className="group inline-flex items-center justify-center gap-2 px-10 py-5 bg-white text-black rounded-full font-semibold text-sm hover:shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:scale-[1.03] transition-all duration-500"
+                  className="group inline-flex items-center justify-center gap-2 px-10 py-5 bg-gray-900 text-white dark:bg-white dark:text-black rounded-full font-semibold text-sm hover:shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:scale-[1.03] transition-all duration-500"
                 >
                   Get Started
                   <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                 </a>
                 <a
                   href="/portfolio"
-                  className="btn-glow px-10 py-5 rounded-full font-medium text-sm text-white border border-white/15 hover:border-transparent transition-all duration-500 text-center"
+                  className="btn-glow px-10 py-5 rounded-full font-medium text-sm text-gray-900 dark:text-white border border-black/10 dark:border-white/15 hover:border-transparent transition-all duration-500 text-center"
                 >
                   View Our Work
                 </a>

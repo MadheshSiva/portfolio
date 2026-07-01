@@ -32,7 +32,7 @@ const TeamCard = ({ member, index = 0 }) => {
         <div className="relative w-24 h-24 mb-6">
           {/* Glow ring behind avatar */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-violet-500/20 to-blue-500/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-125" />
-          <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-violet-500/40 transition-colors duration-500 bg-white/[0.03]">
+          <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-black/10 dark:border-white/10 group-hover:border-violet-500/40 transition-colors duration-500 bg-black/5 dark:bg-white/[0.03]">
             {isVisible && !error && (
               <img
                 src={member.image}
@@ -48,7 +48,7 @@ const TeamCard = ({ member, index = 0 }) => {
               />
             )}
             {(error || !loaded) && (
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-violet-500/20 to-blue-500/20 text-white/60 text-xl font-semibold">
+              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-violet-500/20 to-blue-500/20 text-gray-600 dark:text-white/60 text-xl font-semibold">
                 {getInitials(member.name)}
               </div>
             )}
@@ -56,10 +56,10 @@ const TeamCard = ({ member, index = 0 }) => {
         </div>
 
         {/* Info */}
-        <h3 className="text-lg font-semibold text-white/90 tracking-tight group-hover:text-white transition-colors duration-300">
+        <h3 className="text-lg font-semibold text-gray-600 dark:text-white/90 tracking-tight group-hover:text-gray-900 dark:text-white transition-colors duration-300">
           {member.name}
         </h3>
-        <p className="text-sm text-white/40 mt-1 font-light">
+        <p className="text-sm text-gray-600 dark:text-white/40 mt-1 font-light">
           {member.role}
         </p>
 
@@ -68,7 +68,7 @@ const TeamCard = ({ member, index = 0 }) => {
           {member.skills?.slice(0, 3).map((skill, i) => (
             <span
               key={i}
-              className="px-2.5 py-1 text-[10px] font-medium tracking-wide uppercase rounded-full border border-white/[0.06] bg-white/[0.03] text-white/35 group-hover:border-violet-500/20 group-hover:text-white/50 transition-all duration-300"
+              className="px-2.5 py-1 text-[10px] font-medium tracking-wide uppercase rounded-full border border-black/10 dark:border-white/[0.06] bg-black/5 dark:bg-white/[0.03] text-gray-600 dark:text-white/35 group-hover:border-violet-500/20 group-hover:text-gray-600 dark:text-white/50 transition-all duration-300"
             >
               {skill}
             </span>
@@ -76,7 +76,7 @@ const TeamCard = ({ member, index = 0 }) => {
         </div>
 
         {/* Arrow */}
-        <div className="mt-6 flex items-center gap-1 text-xs font-medium text-white/25 group-hover:text-violet-400 transition-all duration-300">
+        <div className="mt-6 flex items-center gap-1 text-xs font-medium text-gray-600 dark:text-white/25 group-hover:text-violet-400 transition-all duration-300">
           View Profile
           <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="pt-32 pb-24 bg-[#050505] min-h-screen text-white">
+    <section className="pt-32 pb-24 bg-gray-50 dark:bg-[#050505] min-h-screen text-gray-900 dark:text-white">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}
@@ -9,13 +9,13 @@ const About = () => {
             <div className="w-[500px] h-[500px] bg-violet-500/[0.04] rounded-full blur-[120px]"></div>
           </div>
           <div className="relative">
-            <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-4 block">
+            <span className="text-xs tracking-[0.3em] uppercase text-gray-600 dark:text-white/30 font-medium mb-4 block">
               Our Story
             </span>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white/90">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-gray-600 dark:text-white/90">
               About <span className="animated-gradient-text">Pick Pixel</span>
             </h1>
-            <p className="mt-8 max-w-2xl mx-auto text-lg text-white/45 leading-relaxed font-light">
+            <p className="mt-8 max-w-2xl mx-auto text-lg text-gray-600 dark:text-white/45 leading-relaxed font-light">
               We are a software and AI development team focused on building
               reliable, scalable, and thoughtfully designed digital products.
             </p>
@@ -27,13 +27,13 @@ const About = () => {
           <div className="glass max-w-4xl mx-auto p-12 sm:p-16 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-violet-500/[0.04] to-blue-500/[0.03] pointer-events-none" />
             <div className="relative text-center">
-              <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-4 block">
+              <span className="text-xs tracking-[0.3em] uppercase text-gray-600 dark:text-white/30 font-medium mb-4 block">
                 Why We Exist
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-white/90 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-gray-600 dark:text-white/90 mb-6">
                 Our Mission
               </h2>
-              <p className="text-lg text-white/50 leading-relaxed font-light max-w-2xl mx-auto">
+              <p className="text-lg text-gray-600 dark:text-white/50 leading-relaxed font-light max-w-2xl mx-auto">
                 Our mission is to help businesses turn ideas into dependable
                 software solutions. We focus on clarity, performance, and
                 long-term value rather than short-term trends.
@@ -45,10 +45,10 @@ const About = () => {
         {/* What Sets Us Apart */}
         <div className="mt-32">
           <div className="text-center mb-16">
-            <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-4 block">
+            <span className="text-xs tracking-[0.3em] uppercase text-gray-600 dark:text-white/30 font-medium mb-4 block">
               Our Edge
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-white/90">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-gray-600 dark:text-white/90">
               What sets us apart
             </h2>
           </div>
@@ -84,13 +84,13 @@ const About = () => {
               },
             ].map((item, i) => (
               <div key={i} className="glass p-8 sm:p-10 group cursor-default">
-                <div className="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center mb-6 text-white/50 group-hover:text-violet-400 group-hover:border-violet-500/30 group-hover:bg-violet-500/[0.08] transition-all duration-500">
+                <div className="w-12 h-12 rounded-2xl bg-black/5 dark:bg-white/[0.04] border border-black/10 dark:border-white/[0.08] flex items-center justify-center mb-6 text-gray-600 dark:text-white/50 group-hover:text-violet-400 group-hover:border-violet-500/30 group-hover:bg-violet-500/[0.08] transition-all duration-500">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white/90 mb-4 tracking-tight group-hover:text-white transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-gray-600 dark:text-white/90 mb-4 tracking-tight group-hover:text-gray-900 dark:text-white transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p className="text-white/40 font-light leading-relaxed group-hover:text-white/55 transition-colors duration-300">
+                <p className="text-gray-600 dark:text-white/40 font-light leading-relaxed group-hover:text-gray-600 dark:text-white/55 transition-colors duration-300">
                   {item.desc}
                 </p>
               </div>
@@ -101,13 +101,13 @@ const About = () => {
         {/* Experience */}
         <div className="mt-32">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-4 block">
+            <span className="text-xs tracking-[0.3em] uppercase text-gray-600 dark:text-white/30 font-medium mb-4 block">
               Our Background
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-white/90 mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-gray-600 dark:text-white/90 mb-8">
               Our Experience
             </h2>
-            <p className="text-lg text-white/45 leading-relaxed font-light">
+            <p className="text-lg text-gray-600 dark:text-white/45 leading-relaxed font-light">
               Our team consists of experienced engineers and AI specialists who
               have worked on web platforms, mobile applications, automation
               systems, and AI-powered products across multiple industries.
@@ -122,20 +122,20 @@ const About = () => {
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-violet-500/[0.04] blur-[100px] rounded-full" />
             </div>
             <div className="relative">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-white/90 mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-gray-600 dark:text-white/90 mb-5">
                 Want to learn more about our work?
               </h2>
               <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
                 <a
                   href="/team"
-                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-black rounded-full font-semibold text-sm hover:shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:scale-[1.03] transition-all duration-500"
+                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-900 text-white dark:bg-white dark:text-black rounded-full font-semibold text-sm hover:shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:scale-[1.03] transition-all duration-500"
                 >
                   Meet the Team
                   <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                 </a>
                 <a
                   href="/contact"
-                  className="btn-glow px-8 py-4 rounded-full font-medium text-sm text-white border border-white/15 hover:border-transparent transition-all duration-500 text-center"
+                  className="btn-glow px-8 py-4 rounded-full font-medium text-sm text-gray-900 dark:text-white border border-black/10 dark:border-white/15 hover:border-transparent transition-all duration-500 text-center"
                 >
                   Contact Us
                 </a>

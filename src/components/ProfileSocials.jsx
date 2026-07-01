@@ -27,7 +27,7 @@ const IconWrapper = ({ href, label, children }) => {
       {/* Tooltip */}
       <span
         className="absolute -bottom-8 left-1/2 -translate-x-1/2
-                   text-xs px-2 py-1 rounded bg-black text-white
+                   text-xs px-2 py-1 rounded bg-black text-gray-900 dark:text-white
                    opacity-0 group-hover:opacity-100 transition
                    whitespace-nowrap"
       >

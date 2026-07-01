@@ -125,14 +125,14 @@ const ProfileSection = () => {
 
         {/* ────── Section Header ────── */}
         <Reveal className="text-center mb-20">
-          <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-4 block">
+          <span className="text-xs tracking-[0.3em] uppercase text-gray-600 dark:text-white/30 font-medium mb-4 block">
             Who We Are
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter mb-6">
             The minds behind{" "}
             <span className="animated-gradient-text">Pick Pixel</span>
           </h2>
-          <p className="text-white/40 max-w-2xl mx-auto text-lg font-light leading-relaxed">
+          <p className="text-gray-600 dark:text-white/40 max-w-2xl mx-auto text-lg font-light leading-relaxed">
             A passionate collective of designers, developers, and innovators
             dedicated to transforming ideas into exceptional digital experiences.
           </p>
@@ -141,7 +141,7 @@ const ProfileSection = () => {
         {/* ────── Expertise Grid ────── */}
         <div className="mb-24">
           <Reveal className="text-center mb-12">
-            <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-white/90">
+            <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-600 dark:text-white/90">
               Our Expertise
             </h3>
           </Reveal>
@@ -150,13 +150,13 @@ const ProfileSection = () => {
             {departments.map((dept, i) => (
               <Reveal key={i} delay={i * 80}>
                 <div className="glass p-8 h-full group cursor-default">
-                  <div className="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center mb-6 text-white/50 group-hover:text-violet-400 group-hover:border-violet-500/30 group-hover:bg-violet-500/[0.08] transition-all duration-500">
+                  <div className="w-12 h-12 rounded-2xl bg-black/5 dark:bg-white/[0.04] border border-black/10 dark:border-white/[0.08] flex items-center justify-center mb-6 text-gray-600 dark:text-white/50 group-hover:text-violet-400 group-hover:border-violet-500/30 group-hover:bg-violet-500/[0.08] transition-all duration-500">
                     {dept.icon}
                   </div>
-                  <h4 className="text-lg font-semibold text-white/90 mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
+                  <h4 className="text-lg font-semibold text-gray-600 dark:text-white/90 mb-3 tracking-tight group-hover:text-gray-900 dark:text-white transition-colors duration-300">
                     {dept.title}
                   </h4>
-                  <p className="text-sm text-white/40 font-light leading-relaxed group-hover:text-white/55 transition-colors duration-300">
+                  <p className="text-sm text-gray-600 dark:text-white/40 font-light leading-relaxed group-hover:text-gray-600 dark:text-white/55 transition-colors duration-300">
                     {dept.description}
                   </p>
                 </div>
@@ -178,10 +178,10 @@ const ProfileSection = () => {
                 { value: "24/7", label: "Support Available" },
               ].map((stat, i) => (
                 <div key={i}>
-                  <span className="block text-4xl sm:text-5xl font-bold tracking-tighter text-white/90 mb-2">
+                  <span className="block text-4xl sm:text-5xl font-bold tracking-tighter text-gray-600 dark:text-white/90 mb-2">
                     {stat.value}
                   </span>
-                  <span className="text-xs sm:text-sm tracking-[0.15em] uppercase text-white/35 font-medium">
+                  <span className="text-xs sm:text-sm tracking-[0.15em] uppercase text-gray-600 dark:text-white/35 font-medium">
                     {stat.label}
                   </span>
                 </div>
@@ -194,19 +194,19 @@ const ProfileSection = () => {
         <div className="mb-24">
           <Reveal className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-14">
             <div>
-              <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-4 block">
+              <span className="text-xs tracking-[0.3em] uppercase text-gray-600 dark:text-white/30 font-medium mb-4 block">
                 Our Work
               </span>
-              <h3 className="text-3xl sm:text-4xl font-bold tracking-tighter text-white/90">
+              <h3 className="text-3xl sm:text-4xl font-bold tracking-tighter text-gray-600 dark:text-white/90">
                 Featured Projects
               </h3>
-              <p className="text-white/40 mt-3 max-w-lg font-light">
+              <p className="text-gray-600 dark:text-white/40 mt-3 max-w-lg font-light">
                 Showcasing our latest work — quality, innovation, and impact.
               </p>
             </div>
             <a
               href="/portfolio"
-              className="text-sm font-medium text-white/40 hover:text-white border-b border-white/15 hover:border-white/40 pb-1 transition-all duration-300 shrink-0"
+              className="text-sm font-medium text-gray-600 dark:text-white/40 hover:text-gray-900 dark:text-white border-b border-black/10 dark:border-white/15 hover:border-black/10 dark:border-white/40 pb-1 transition-all duration-300 shrink-0"
             >
               View All Projects ↗
             </a>
@@ -234,17 +234,17 @@ const ProfileSection = () => {
                     {/* Overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     {/* Category badge */}
-                    <div className="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-white/[0.08] backdrop-blur-xl border border-white/10 text-xs font-medium text-white/70">
+                    <div className="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-black/5 dark:bg-white/[0.08] backdrop-blur-xl border border-black/10 dark:border-white/10 text-xs font-medium text-gray-600 dark:text-white/70">
                       {project.category}
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="p-8">
-                    <h4 className="text-xl font-semibold text-white/90 mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
+                    <h4 className="text-xl font-semibold text-gray-600 dark:text-white/90 mb-3 tracking-tight group-hover:text-gray-900 dark:text-white transition-colors duration-300">
                       {project.title}
                     </h4>
-                    <p className="text-sm text-white/40 font-light leading-relaxed mb-5 line-clamp-2 group-hover:text-white/50 transition-colors duration-300">
+                    <p className="text-sm text-gray-600 dark:text-white/40 font-light leading-relaxed mb-5 line-clamp-2 group-hover:text-gray-600 dark:text-white/50 transition-colors duration-300">
                       {project.description}
                     </p>
 
@@ -253,20 +253,20 @@ const ProfileSection = () => {
                       {project.tech.slice(0, 4).map((tech, j) => (
                         <span
                           key={j}
-                          className="px-2.5 py-1 text-[10px] font-medium tracking-wide uppercase rounded-full border border-white/[0.06] bg-white/[0.03] text-white/35 group-hover:border-violet-500/20 group-hover:text-white/50 transition-all duration-300"
+                          className="px-2.5 py-1 text-[10px] font-medium tracking-wide uppercase rounded-full border border-black/10 dark:border-white/[0.06] bg-black/5 dark:bg-white/[0.03] text-gray-600 dark:text-white/35 group-hover:border-violet-500/20 group-hover:text-gray-600 dark:text-white/50 transition-all duration-300"
                         >
                           {tech}
                         </span>
                       ))}
                       {project.tech.length > 4 && (
-                        <span className="px-2.5 py-1 text-[10px] font-medium tracking-wide rounded-full border border-white/[0.06] bg-white/[0.03] text-white/30">
+                        <span className="px-2.5 py-1 text-[10px] font-medium tracking-wide rounded-full border border-black/10 dark:border-white/[0.06] bg-black/5 dark:bg-white/[0.03] text-gray-600 dark:text-white/30">
                           +{project.tech.length - 4}
                         </span>
                       )}
                     </div>
 
                     {/* View link */}
-                    <div className="flex items-center gap-1.5 text-xs font-medium text-white/25 group-hover:text-violet-400 transition-all duration-300">
+                    <div className="flex items-center gap-1.5 text-xs font-medium text-gray-600 dark:text-white/25 group-hover:text-violet-400 transition-all duration-300">
                       View Project
                       <svg
                         className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300"
@@ -287,13 +287,13 @@ const ProfileSection = () => {
         {/* ────── Team Members ────── */}
         <div className="mb-24">
           <Reveal className="text-center mb-14">
-            <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-4 block">
+            <span className="text-xs tracking-[0.3em] uppercase text-gray-600 dark:text-white/30 font-medium mb-4 block">
               The People
             </span>
-            <h3 className="text-3xl sm:text-4xl font-bold tracking-tighter text-white/90 mb-4">
+            <h3 className="text-3xl sm:text-4xl font-bold tracking-tighter text-gray-600 dark:text-white/90 mb-4">
               Meet the Team
             </h3>
-            <p className="text-white/40 max-w-xl mx-auto font-light">
+            <p className="text-gray-600 dark:text-white/40 max-w-xl mx-auto font-light">
               Each member brings unique expertise and passion to create
               innovative solutions that exceed expectations.
             </p>
@@ -314,16 +314,16 @@ const ProfileSection = () => {
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-violet-500/[0.04] blur-[100px] rounded-full" />
             </div>
             <div className="relative">
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-white/90 mb-5">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-gray-600 dark:text-white/90 mb-5">
                 Ready to work with us?
               </h3>
-              <p className="text-white/40 mb-10 max-w-lg mx-auto font-light text-lg">
+              <p className="text-gray-600 dark:text-white/40 mb-10 max-w-lg mx-auto font-light text-lg">
                 Let's collaborate to bring your digital vision to life with
                 creativity, precision, and innovation.
               </p>
               <a
                 href="/contact"
-                className="group inline-flex items-center gap-2 px-10 py-5 bg-white text-black rounded-full font-semibold text-sm hover:shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:scale-[1.03] transition-all duration-500"
+                className="group inline-flex items-center gap-2 px-10 py-5 bg-gray-900 text-white dark:bg-white dark:text-black rounded-full font-semibold text-sm hover:shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:scale-[1.03] transition-all duration-500"
               >
                 Start Your Project
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>

@@ -181,7 +181,7 @@ const testimonials = [
    ═══════════════════════════════════════════════════ */
 const Home = () => {
   return (
-    <div className="bg-[#050505] text-white min-h-screen overflow-hidden">
+    <div className="bg-gray-50 dark:bg-[#050505] text-gray-900 dark:text-white min-h-screen overflow-hidden">
       {/* ────────────── HERO ────────────── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center px-6">
         {/* Three.js Background */}
@@ -200,7 +200,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-10 inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-xl text-xs tracking-[0.25em] uppercase text-white/60"
+            className="mb-10 inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/[0.03] backdrop-blur-xl text-xs tracking-[0.25em] uppercase text-gray-600 dark:text-white/60"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
             Digital Product Studio
@@ -223,7 +223,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-2xl text-base sm:text-lg md:text-xl text-white/50 font-light leading-relaxed mb-12"
+            className="max-w-2xl text-base sm:text-lg md:text-xl text-gray-600 dark:text-white/50 font-light leading-relaxed mb-12"
           >
             From idea to launch — we design and engineer premium websites,
             mobile apps, SaaS platforms, and AI solutions that move industries forward.
@@ -238,14 +238,14 @@ const Home = () => {
           >
             <a
               href="/contact"
-              className="group px-8 py-4 bg-white text-black rounded-full font-semibold text-sm hover:shadow-[0_0_40px_rgba(255,255,255,0.25)] hover:scale-[1.03] transition-all duration-500"
+              className="group px-8 py-4 bg-gray-900 text-white dark:bg-white dark:text-black rounded-full font-semibold text-sm hover:shadow-[0_0_40px_rgba(255,255,255,0.25)] hover:scale-[1.03] transition-all duration-500"
             >
               Start a Project
               <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
             </a>
             <a
               href="/portfolio"
-              className="btn-glow px-8 py-4 rounded-full font-medium text-sm text-white border border-white/15 hover:border-transparent transition-all duration-500"
+              className="btn-glow px-8 py-4 rounded-full font-medium text-sm text-gray-900 dark:text-white border border-black/10 dark:border-white/15 hover:border-transparent transition-all duration-500"
             >
               View Our Work
             </a>
@@ -259,18 +259,18 @@ const Home = () => {
           transition={{ delay: 1.5, duration: 1 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
         >
-          <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
+          <div className="w-6 h-10 border-2 border-black/10 dark:border-white/20 rounded-full flex justify-center">
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-              className="w-1.5 h-1.5 bg-white/60 rounded-full mt-2"
+              className="w-1.5 h-1.5 bg-black/5 dark:bg-white/60 rounded-full mt-2"
             />
           </div>
         </motion.div>
       </section>
 
       {/* ────────────── METRICS ────────────── */}
-      <section className="relative z-10 py-24 px-6 border-y border-white/[0.04]">
+      <section className="relative z-10 py-24 px-6 border-y border-black/10 dark:border-white/[0.04]">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {[
             { value: "4+", label: "Products Shipped" },
@@ -279,10 +279,10 @@ const Home = () => {
             { value: "2+ Yrs", label: "In The Game" },
           ].map((stat, i) => (
             <RevealSection key={i} delay={i * 100} className="text-center">
-              <span className="block text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-white/90 mb-2">
+              <span className="block text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-gray-600 dark:text-white/90 mb-2">
                 {stat.value}
               </span>
-              <span className="text-xs sm:text-sm tracking-[0.2em] uppercase text-white/35 font-medium">
+              <span className="text-xs sm:text-sm tracking-[0.2em] uppercase text-gray-600 dark:text-white/35 font-medium">
                 {stat.label}
               </span>
             </RevealSection>
@@ -294,13 +294,13 @@ const Home = () => {
       <section className="relative z-10 py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <RevealSection className="text-center mb-20">
-            <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-4 block">
+            <span className="text-xs tracking-[0.3em] uppercase text-gray-600 dark:text-white/30 font-medium mb-4 block">
               What We Do
             </span>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter mb-6">
               Full-spectrum <span className="animated-gradient-text">capabilities</span>
             </h2>
-            <p className="text-white/40 max-w-xl mx-auto text-lg font-light">
+            <p className="text-gray-600 dark:text-white/40 max-w-xl mx-auto text-lg font-light">
               End-to-end product development for ambitious teams.
             </p>
           </RevealSection>
@@ -309,13 +309,13 @@ const Home = () => {
             {services.map((s, i) => (
               <RevealSection key={i} delay={i * 80} className={`${s.span}`}>
                 <div className="glass p-8 sm:p-10 h-full group cursor-default">
-                  <div className="w-14 h-14 rounded-2xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center mb-8 text-white/70 group-hover:text-violet-400 group-hover:border-violet-500/30 group-hover:bg-violet-500/[0.08] transition-all duration-500">
+                  <div className="w-14 h-14 rounded-2xl bg-black/5 dark:bg-white/[0.04] border border-black/10 dark:border-white/[0.08] flex items-center justify-center mb-8 text-gray-600 dark:text-white/70 group-hover:text-violet-400 group-hover:border-violet-500/30 group-hover:bg-violet-500/[0.08] transition-all duration-500">
                     {s.icon}
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-semibold tracking-tight mb-4 text-white/90 group-hover:text-white transition-colors duration-300">
+                  <h3 className="text-xl sm:text-2xl font-semibold tracking-tight mb-4 text-gray-600 dark:text-white/90 group-hover:text-gray-900 dark:text-white transition-colors duration-300">
                     {s.title}
                   </h3>
-                  <p className="text-white/40 font-light leading-relaxed group-hover:text-white/55 transition-colors duration-300">
+                  <p className="text-gray-600 dark:text-white/40 font-light leading-relaxed group-hover:text-gray-600 dark:text-white/55 transition-colors duration-300">
                     {s.desc}
                   </p>
                 </div>
@@ -326,10 +326,10 @@ const Home = () => {
       </section>
 
       {/* ────────────── PROCESS ────────────── */}
-      <section className="relative z-10 py-32 px-6 border-y border-white/[0.04]">
+      <section className="relative z-10 py-32 px-6 border-y border-black/10 dark:border-white/[0.04]">
         <div className="max-w-7xl mx-auto">
           <RevealSection className="text-center mb-20">
-            <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-4 block">
+            <span className="text-xs tracking-[0.3em] uppercase text-gray-600 dark:text-white/30 font-medium mb-4 block">
               How We Work
             </span>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter">
@@ -346,8 +346,8 @@ const Home = () => {
                     {step.num}
                   </span>
                   <span className="text-sm font-mono text-violet-400 mb-4 block">{step.num}</span>
-                  <h3 className="text-xl font-semibold tracking-tight mb-3 text-white/90">{step.title}</h3>
-                  <p className="text-white/40 font-light leading-relaxed text-sm">{step.desc}</p>
+                  <h3 className="text-xl font-semibold tracking-tight mb-3 text-gray-600 dark:text-white/90">{step.title}</h3>
+                  <p className="text-gray-600 dark:text-white/40 font-light leading-relaxed text-sm">{step.desc}</p>
                 </div>
               </RevealSection>
             ))}
@@ -358,15 +358,15 @@ const Home = () => {
       {/* ────────────── TECH STACK ────────────── */}
       <section className="relative z-10 py-24 overflow-hidden">
         <RevealSection className="text-center mb-12">
-          <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium">
+          <span className="text-xs tracking-[0.3em] uppercase text-gray-600 dark:text-white/30 font-medium">
             Technologies We Master
           </span>
         </RevealSection>
         <div className="relative w-full max-w-7xl mx-auto">
           <div className="pointer-events-none absolute inset-y-0 left-0 w-32 sm:w-48 bg-gradient-to-r from-[#050505] to-transparent z-10" />
-          <div className="flex w-max animate-marquee gap-12 sm:gap-16 text-lg sm:text-xl tracking-tight text-white/30 font-semibold">
+          <div className="flex w-max animate-marquee gap-12 sm:gap-16 text-lg sm:text-xl tracking-tight text-gray-600 dark:text-white/30 font-semibold">
             {[...techStack, ...techStack].map((t, i) => (
-              <span key={i} className="whitespace-nowrap hover:text-white/80 transition-colors duration-300 cursor-default">
+              <span key={i} className="whitespace-nowrap hover:text-gray-600 dark:text-white/80 transition-colors duration-300 cursor-default">
                 {t}
               </span>
             ))}
@@ -383,7 +383,7 @@ const Home = () => {
       {/* ────────────── TESTIMONIALS ────────────── */}
       <section className="relative z-10 py-32 px-6 overflow-hidden">
         <RevealSection className="text-center mb-16">
-          <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-4 block">
+          <span className="text-xs tracking-[0.3em] uppercase text-gray-600 dark:text-white/30 font-medium mb-4 block">
             Client Love
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter">
@@ -396,16 +396,16 @@ const Home = () => {
           <div className="flex w-max animate-marquee gap-6 hover:[animation-play-state:paused]" style={{ animationDuration: "50s" }}>
             {testimonials.map((t, i) => (
               <div key={i} className="glass w-[340px] sm:w-[400px] p-8 shrink-0 flex flex-col justify-between hover:transform-none">
-                <p className="text-white/70 font-light text-base leading-relaxed mb-8">
+                <p className="text-gray-600 dark:text-white/70 font-light text-base leading-relaxed mb-8">
                   "{t.text}"
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-violet-500/30 to-blue-500/30 border border-white/10 flex items-center justify-center text-xs font-bold text-white/60">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-violet-500/30 to-blue-500/30 border border-black/10 dark:border-white/10 flex items-center justify-center text-xs font-bold text-gray-600 dark:text-white/60">
                     {t.author.charAt(0)}
                   </div>
                   <div>
-                    <span className="text-sm font-medium text-white/80 block">{t.author}</span>
-                    <span className="text-xs text-white/35">{t.role}</span>
+                    <span className="text-sm font-medium text-gray-600 dark:text-white/80 block">{t.author}</span>
+                    <span className="text-xs text-gray-600 dark:text-white/35">{t.role}</span>
                   </div>
                 </div>
               </div>
@@ -428,12 +428,12 @@ const Home = () => {
             <br />
             <span className="animated-gradient-text">something epic</span>
           </h2>
-          <p className="text-lg sm:text-xl text-white/40 font-light mb-14 max-w-xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-white/40 font-light mb-14 max-w-xl mx-auto">
             Your next big idea deserves world-class engineering. Let's make it happen.
           </p>
           <a
             href="/contact"
-            className="group inline-flex items-center gap-2 px-10 sm:px-14 py-5 sm:py-6 bg-white text-black rounded-full font-semibold text-base sm:text-lg hover:shadow-[0_0_60px_rgba(255,255,255,0.2)] hover:scale-[1.03] transition-all duration-500"
+            className="group inline-flex items-center gap-2 px-10 sm:px-14 py-5 sm:py-6 bg-gray-900 text-white dark:bg-white dark:text-black rounded-full font-semibold text-base sm:text-lg hover:shadow-[0_0_60px_rgba(255,255,255,0.2)] hover:scale-[1.03] transition-all duration-500"
           >
             Start Your Journey
             <span className="group-hover:translate-x-1.5 transition-transform duration-300">→</span>
@@ -442,24 +442,24 @@ const Home = () => {
       </section>
 
       {/* ────────────── FOOTER ────────────── */}
-      <footer className="relative z-10 border-t border-white/[0.04] bg-[#020202] pt-20 pb-10 px-6">
+      <footer className="relative z-10 border-t border-black/10 dark:border-white/[0.04] bg-gray-100 dark:bg-[#020202] pt-20 pb-10 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-16">
             {/* Brand */}
             <div className="sm:col-span-2 md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-blue-500 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">PP</span>
+                  <span className="text-gray-900 dark:text-white font-bold text-sm">PP</span>
                 </div>
                 <span className="text-xl font-semibold tracking-tight">Pick Pixel</span>
               </div>
-              <p className="text-white/40 max-w-sm leading-relaxed font-light">
+              <p className="text-gray-600 dark:text-white/40 max-w-sm leading-relaxed font-light">
                 A digital product studio crafting premium websites, mobile apps, and AI solutions for ambitious teams worldwide.
               </p>
               {/* Social */}
               <div className="flex gap-3 mt-8">
                 {["X", "Li", "Gh", "Ig"].map((s, i) => (
-                  <a key={i} href="#" className="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-white/40 hover:text-white hover:bg-white/[0.08] hover:border-white/15 transition-all duration-300 text-xs font-semibold">
+                  <a key={i} href="#" className="w-10 h-10 rounded-xl bg-black/5 dark:bg-white/[0.04] border border-black/10 dark:border-white/[0.06] flex items-center justify-center text-gray-600 dark:text-white/40 hover:text-gray-900 dark:text-white hover:bg-black/5 dark:bg-white/[0.08] hover:border-black/10 dark:border-white/15 transition-all duration-300 text-xs font-semibold">
                     {s}
                   </a>
                 ))}
@@ -467,7 +467,7 @@ const Home = () => {
             </div>
             {/* Links */}
             <div>
-              <h4 className="text-sm font-semibold text-white/80 mb-6 tracking-wide">Company</h4>
+              <h4 className="text-sm font-semibold text-gray-600 dark:text-white/80 mb-6 tracking-wide">Company</h4>
               <ul className="space-y-4">
                 {[
                   { label: "About", href: "/about" },
@@ -476,13 +476,13 @@ const Home = () => {
                   { label: "Case Studies", href: "/portfolio" },
                 ].map((l, i) => (
                   <li key={i}>
-                    <a href={l.href} className="text-sm text-white/35 hover:text-white transition-colors duration-300">{l.label}</a>
+                    <a href={l.href} className="text-sm text-gray-600 dark:text-white/35 hover:text-gray-900 dark:text-white transition-colors duration-300">{l.label}</a>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-white/80 mb-6 tracking-wide">Connect</h4>
+              <h4 className="text-sm font-semibold text-gray-600 dark:text-white/80 mb-6 tracking-wide">Connect</h4>
               <ul className="space-y-4">
                 {[
                   { label: "Twitter (X)", href: "#" },
@@ -491,7 +491,7 @@ const Home = () => {
                   { label: "Contact Us", href: "/contact" },
                 ].map((l, i) => (
                   <li key={i}>
-                    <a href={l.href} className="text-sm text-white/35 hover:text-white transition-colors duration-300">{l.label}</a>
+                    <a href={l.href} className="text-sm text-gray-600 dark:text-white/35 hover:text-gray-900 dark:text-white transition-colors duration-300">{l.label}</a>
                   </li>
                 ))}
               </ul>
@@ -499,11 +499,11 @@ const Home = () => {
           </div>
 
           {/* Bottom bar */}
-          <div className="pt-8 border-t border-white/[0.04] flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-white/25">© 2026 Pick Pixel. All rights reserved.</p>
-            <div className="flex gap-6 text-xs text-white/25">
-              <a href="#" className="hover:text-white/60 transition-colors">Privacy</a>
-              <a href="#" className="hover:text-white/60 transition-colors">Terms</a>
+          <div className="pt-8 border-t border-black/10 dark:border-white/[0.04] flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-gray-600 dark:text-white/25">© 2026 Pick Pixel. All rights reserved.</p>
+            <div className="flex gap-6 text-xs text-gray-600 dark:text-white/25">
+              <a href="#" className="hover:text-gray-600 dark:text-white/60 transition-colors">Privacy</a>
+              <a href="#" className="hover:text-gray-600 dark:text-white/60 transition-colors">Terms</a>
             </div>
           </div>
         </div>

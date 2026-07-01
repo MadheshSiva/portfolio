@@ -24,7 +24,7 @@ const ProfileDetail = () => {
     if (!member) return null;
 
     return (
-        <section className="pt-24 pb-24 bg-[#050505] min-h-screen text-white">
+        <section className="pt-24 pb-24 bg-gray-50 dark:bg-[#050505] min-h-screen text-gray-900 dark:text-white">
             <div className="max-w-6xl mx-auto px-6">
 
                 {/* Ambient Glows */}
@@ -42,7 +42,7 @@ const ProfileDetail = () => {
                     <div className="glass overflow-hidden">
                         {/* Header gradient */}
                         <div className="relative h-48 bg-gradient-to-r from-violet-500/20 via-blue-500/15 to-violet-500/20">
-                            <div className="absolute inset-0 bg-[#050505]/30 backdrop-blur-sm" />
+                            <div className="absolute inset-0 bg-gray-50 dark:bg-[#050505]/30 backdrop-blur-sm" />
                         </div>
 
                         {/* Content */}
@@ -51,7 +51,7 @@ const ProfileDetail = () => {
                             <div className="flex justify-center -mt-20 mb-6">
                                 <div className="relative">
                                     <div className="absolute inset-0 bg-gradient-to-br from-violet-500/30 to-blue-500/30 rounded-full blur-xl" />
-                                    <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-[#050505] shadow-2xl bg-white/[0.03]">
+                                    <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-[#050505] shadow-2xl bg-black/5 dark:bg-white/[0.03]">
                                         {!imgError ? (
                                             <img
                                                 src={member.image}
@@ -60,7 +60,7 @@ const ProfileDetail = () => {
                                                 onError={() => setImgError(true)}
                                             />
                                         ) : (
-                                            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-violet-500/20 to-blue-500/20 text-3xl font-bold text-white/60">
+                                            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-violet-500/20 to-blue-500/20 text-3xl font-bold text-gray-600 dark:text-white/60">
                                                 {getInitials(member.name)}
                                             </div>
                                         )}
@@ -73,7 +73,7 @@ const ProfileDetail = () => {
 
                             {/* Name & Role */}
                             <div className="text-center space-y-3">
-                                <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter text-white/90">
+                                <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter text-gray-600 dark:text-white/90">
                                     {member.name}
                                 </h1>
                                 <p className="text-lg font-medium text-violet-400">
@@ -86,7 +86,7 @@ const ProfileDetail = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.3, duration: 0.6 }}
-                                className="mt-8 text-center text-lg text-white/45 max-w-3xl mx-auto leading-relaxed font-light"
+                                className="mt-8 text-center text-lg text-gray-600 dark:text-white/45 max-w-3xl mx-auto leading-relaxed font-light"
                             >
                                 {member.summary}
                             </motion.p>
@@ -105,7 +105,7 @@ const ProfileDetail = () => {
                                             initial={{ opacity: 0, scale: 0.8 }}
                                             animate={{ opacity: 1, scale: 1 }}
                                             transition={{ delay: 0.6 + i * 0.05 }}
-                                            className="px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.03] text-sm font-medium text-white/50 hover:border-violet-500/30 hover:text-white/70 hover:bg-violet-500/[0.05] transition-all duration-300 cursor-default"
+                                            className="px-4 py-2 rounded-full border border-black/10 dark:border-white/[0.08] bg-black/5 dark:bg-white/[0.03] text-sm font-medium text-gray-600 dark:text-white/50 hover:border-violet-500/30 hover:text-gray-600 dark:text-white/70 hover:bg-violet-500/[0.05] transition-all duration-300 cursor-default"
                                         >
                                             {skill}
                                         </motion.span>
@@ -133,7 +133,7 @@ const ProfileDetail = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                             </div>
-                            <h2 className="text-2xl font-bold text-white/90 tracking-tight">
+                            <h2 className="text-2xl font-bold text-gray-600 dark:text-white/90 tracking-tight">
                                 Experience
                             </h2>
                         </div>
@@ -151,14 +151,14 @@ const ProfileDetail = () => {
                                     <div className="relative">
                                         <div className="w-3 h-3 bg-violet-400 rounded-full mt-1.5 group-hover:scale-150 transition-transform duration-300" />
                                         {i !== member.timeline.length - 1 && (
-                                            <div className="absolute left-1/2 top-6 w-px h-full bg-white/[0.06] -translate-x-1/2" />
+                                            <div className="absolute left-1/2 top-6 w-px h-full bg-black/5 dark:bg-white/[0.06] -translate-x-1/2" />
                                         )}
                                     </div>
                                     <div className="flex-1 pb-8">
                                         <span className="text-xs font-semibold text-violet-400 bg-violet-500/[0.1] border border-violet-500/20 px-3 py-1 rounded-full">
                                             {t.year}
                                         </span>
-                                        <p className="mt-3 text-white/80 font-medium text-lg">
+                                        <p className="mt-3 text-gray-600 dark:text-white/80 font-medium text-lg">
                                             {t.title}
                                         </p>
                                     </div>
@@ -181,7 +181,7 @@ const ProfileDetail = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                 </svg>
                             </div>
-                            <h2 className="text-2xl font-bold text-white/90 tracking-tight">
+                            <h2 className="text-2xl font-bold text-gray-600 dark:text-white/90 tracking-tight">
                                 Projects
                             </h2>
                         </div>
@@ -196,9 +196,9 @@ const ProfileDetail = () => {
                                     transition={{ delay: i * 0.1 }}
                                     className="group"
                                 >
-                                    <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.04] hover:border-white/[0.1] transition-all duration-300">
+                                    <div className="flex items-start gap-4 p-4 rounded-2xl bg-black/5 dark:bg-white/[0.02] border border-black/10 dark:border-white/[0.05] hover:bg-black/5 dark:bg-white/[0.04] hover:border-black/10 dark:border-white/[0.1] transition-all duration-300">
                                         <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 group-hover:scale-150 transition-transform duration-300" />
-                                        <p className="flex-1 text-white/70 font-medium">
+                                        <p className="flex-1 text-gray-600 dark:text-white/70 font-medium">
                                             {project}
                                         </p>
                                     </div>

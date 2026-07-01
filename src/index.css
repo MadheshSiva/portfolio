@@ -1,11 +1,30 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 /* ═══════════════════════════════════════════════
    PICK PIXEL — Premium Design System
    ═══════════════════════════════════════════════ */
 
 @layer base {
   :root {
+    /* Light Mode Defaults */
+    --bg: #fafafa;
+    --fg: #111827;
+    --muted: rgba(0,0,0,0.5);
+    --border: rgba(0,0,0,0.08);
+    --border-hover: rgba(0,0,0,0.18);
+    --glass: rgba(255,255,255,0.6);
+    --glass-strong: rgba(255,255,255,0.8);
+    --accent: #8b5cf6;
+    --accent-blue: #3b82f6;
+    --radius: 24px;
+    --radius-sm: 16px;
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  :root.dark {
+    /* Dark Mode Defaults */
     --bg: #050505;
     --fg: #ffffff;
     --muted: rgba(255,255,255,0.5);
@@ -13,11 +32,6 @@
     --border-hover: rgba(255,255,255,0.18);
     --glass: rgba(255,255,255,0.03);
     --glass-strong: rgba(255,255,255,0.06);
-    --accent: #8b5cf6;
-    --accent-blue: #3b82f6;
-    --radius: 24px;
-    --radius-sm: 16px;
-    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   html {
@@ -41,7 +55,7 @@
 
   ::selection {
     background: rgba(139,92,246,0.35);
-    color: #fff;
+    color: var(--fg);
   }
 }
 
