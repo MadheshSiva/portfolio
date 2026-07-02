@@ -13,7 +13,7 @@ const About = () => {
               Our Story
             </span>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-gray-600 dark:text-white/90">
-              About <span className="animated-gradient-text">Pick Pixel</span>
+              About <span className="animated-gradient-text">Nexora Tech</span>
             </h1>
             <p className="mt-8 max-w-2xl mx-auto text-lg text-gray-600 dark:text-white/45 leading-relaxed font-light">
               We are a software and AI development team focused on building

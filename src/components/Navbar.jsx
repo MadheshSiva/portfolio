@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTheme } from "../context/ThemeContext";
+import logoImg from "../assets/logo.png";
 
 const navLinks = [
   { to: "/about", label: "About" },
@@ -37,15 +38,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-blue-500 flex items-center justify-center shadow-lg shadow-violet-500/20 group-hover:shadow-violet-500/40 transition-shadow duration-500">
-                <span className="text-white font-bold text-sm tracking-tight">PP</span>
-              </div>
-            </div>
-            <span className="text-lg font-semibold text-gray-900 dark:text-white tracking-tight">
-              Pick Pixel
-            </span>
+          <Link to="/" className="flex items-center group py-2">
+            <img src={logoImg} alt="Nexora Tech" className="h-20 md:h-24 lg:h-28 w-auto object-contain transition-all duration-300" />
           </Link>
 
           {/* Desktop Navigation */}

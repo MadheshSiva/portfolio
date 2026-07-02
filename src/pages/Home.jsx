@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import logoImg from "../assets/logo.png";
 import { motion } from "framer-motion";
 import ThreeScene from "../components/ThreeScene";
 import ProfileSection from "../components/ProfileSection";
@@ -135,7 +137,7 @@ const processSteps = [
 /* ─── Testimonials ─── */
 const testimonials = [
   {
-    text: "Pick Pixel transformed our digital presence. The attention to detail and performance is unmatched.",
+    text: "Nexora Tech transformed our digital presence. The attention to detail and performance is unmatched.",
     author: "Sarah Jenkins",
     role: "CEO, TechFlow",
   },
@@ -155,7 +157,7 @@ const testimonials = [
     role: "CTO, InnovatePay",
   },
   {
-    text: "Pick Pixel transformed our digital presence. The attention to detail and performance is unmatched.",
+    text: "Nexora Tech transformed our digital presence. The attention to detail and performance is unmatched.",
     author: "Sarah Jenkins",
     role: "CEO, TechFlow",
   },
@@ -447,11 +449,8 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-16">
             {/* Brand */}
             <div className="sm:col-span-2 md:col-span-2">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-blue-500 flex items-center justify-center">
-                  <span className="text-gray-900 dark:text-white font-bold text-sm">PP</span>
-                </div>
-                <span className="text-xl font-semibold tracking-tight">Pick Pixel</span>
+              <div className="flex items-center mb-8 group">
+                <img src={logoImg} alt="Nexora Tech" className="h-24 md:h-28 lg:h-36 w-auto object-contain transition-all duration-300" />
               </div>
               <p className="text-gray-600 dark:text-white/40 max-w-sm leading-relaxed font-light">
                 A digital product studio crafting premium websites, mobile apps, and AI solutions for ambitious teams worldwide.
@@ -500,7 +499,7 @@ const Home = () => {
 
           {/* Bottom bar */}
           <div className="pt-8 border-t border-black/10 dark:border-white/[0.04] flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-gray-600 dark:text-white/25">© 2026 Pick Pixel. All rights reserved.</p>
+            <p className="text-xs text-gray-600 dark:text-white/25">© 2026 Nexora Tech. All rights reserved.</p>
             <div className="flex gap-6 text-xs text-gray-600 dark:text-white/25">
               <a href="#" className="hover:text-gray-600 dark:text-white/60 transition-colors">Privacy</a>
               <a href="#" className="hover:text-gray-600 dark:text-white/60 transition-colors">Terms</a>
