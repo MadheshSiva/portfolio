@@ -130,7 +130,7 @@ const ProfileSection = () => {
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter mb-6">
             The minds behind{" "}
-            <span className="animated-gradient-text">Nexora Tech</span>
+            <span className="animated-gradient-text">Truvix Co Tech</span>
           </h2>
           <p className="text-gray-600 dark:text-white/40 max-w-2xl mx-auto text-lg font-light leading-relaxed">
             A passionate collective of designers, developers, and innovators

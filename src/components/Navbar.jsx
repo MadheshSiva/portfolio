@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center group py-2">
-            <img src={logoImg} alt="Nexora Tech" className="h-20 md:h-24 lg:h-28 w-auto object-contain transition-all duration-300" />
+            <img src={logoImg} alt="Truvix Co Tech" className="h-20 md:h-24 lg:h-28 w-auto object-contain transition-all duration-300" />
           </Link>
 
           {/* Desktop Navigation */}

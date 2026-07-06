@@ -137,7 +137,7 @@ const processSteps = [
 /* ─── Testimonials ─── */
 const testimonials = [
   {
-    text: "Nexora Tech transformed our digital presence. The attention to detail and performance is unmatched.",
+    text: "Truvix Co Tech transformed our digital presence. The attention to detail and performance is unmatched.",
     author: "Sarah Jenkins",
     role: "CEO, TechFlow",
   },
@@ -157,7 +157,7 @@ const testimonials = [
     role: "CTO, InnovatePay",
   },
   {
-    text: "Nexora Tech transformed our digital presence. The attention to detail and performance is unmatched.",
+    text: "Truvix Co Tech transformed our digital presence. The attention to detail and performance is unmatched.",
     author: "Sarah Jenkins",
     role: "CEO, TechFlow",
   },
@@ -450,7 +450,7 @@ const Home = () => {
             {/* Brand */}
             <div className="sm:col-span-2 md:col-span-2">
               <div className="flex items-center mb-8 group">
-                <img src={logoImg} alt="Nexora Tech" className="h-24 md:h-28 lg:h-36 w-auto object-contain transition-all duration-300" />
+                <img src={logoImg} alt="Truvix Co Tech" className="h-24 md:h-28 lg:h-36 w-auto object-contain transition-all duration-300" />
               </div>
               <p className="text-gray-600 dark:text-white/40 max-w-sm leading-relaxed font-light">
                 A digital product studio crafting premium websites, mobile apps, and AI solutions for ambitious teams worldwide.
@@ -499,7 +499,7 @@ const Home = () => {
 
           {/* Bottom bar */}
           <div className="pt-8 border-t border-black/10 dark:border-white/[0.04] flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-gray-600 dark:text-white/25">© 2026 Nexora Tech. All rights reserved.</p>
+            <p className="text-xs text-gray-600 dark:text-white/25">© 2026 Truvix Co Tech. All rights reserved.</p>
             <div className="flex gap-6 text-xs text-gray-600 dark:text-white/25">
               <a href="#" className="hover:text-gray-600 dark:text-white/60 transition-colors">Privacy</a>
               <a href="#" className="hover:text-gray-600 dark:text-white/60 transition-colors">Terms</a>
